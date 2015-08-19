@@ -1,0 +1,54 @@
+{
+  "name": "aws-ec2-metrics",
+  "version": "0.0.0",
+  "description": "Queries AWS for metrics of running EC2 instances.",
+  "author": {
+    "name": "Athan Reines",
+    "email": "athan@gmail.com"
+  },
+  "contributors": [
+    {
+      "name": "Athan Reines",
+      "email": "athan@gmail.com"
+    }
+  ],
+  "scripts": {
+    "test": "mocha",
+    "test-cov": "istanbul cover ./node_modules/.bin/_mocha --dir ./reports/coverage -- -R spec",
+    "codecov": "istanbul cover ./node_modules/.bin/_mocha --dir ./reports/codecov/coverage --report lcovonly -- -R spec && cat ./reports/codecov/coverage/lcov.info | codecov && rm -rf ./reports/codecov"
+  },
+  "main": "./lib",
+  "bin": {
+    "aws-ec2-metrics": "./bin/cli"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/kgryte/aws-ec2-metrics.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/kgryte/aws-ec2-metrics/issues"
+  },
+  "dependencies": {
+    "aws-ec2-running": "git://github.com/kgryte/aws-ec2-running.git",
+    "aws-sdk": "^2.1.45",
+    "minimist": "^1.1.3",
+    "pkginfo": "^0.3.0",
+    "utils-copy": "^1.0.0",
+    "validate.io-array": "^1.0.6",
+    "validate.io-function": "^1.0.2",
+    "validate.io-object": "^1.0.4",
+    "validate.io-object-array": "^1.0.0",
+    "validate.io-positive": "^1.0.0",
+    "validate.io-string-primitive": "^1.0.0"
+  },
+  "devDependencies": {
+    "chai": "3.x.x",
+    "codecov.io": "^0.1.5",
+    "istanbul": "^0.3.0",
+    "jshint": "2.x.x",
+    "jshint-stylish": "2.x.x",
+    "mocha": "2.x.x"
+  },
+  "license": "MIT"
+}
