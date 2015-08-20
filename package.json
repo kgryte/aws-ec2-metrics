@@ -32,8 +32,10 @@
   "dependencies": {
     "aws-ec2-running": "git://github.com/kgryte/aws-ec2-running.git",
     "aws-sdk": "^2.1.45",
+    "flow-to-geckoboard": "git://github.com/flow-io/to-geckoboard.git",
     "minimist": "^1.1.3",
     "pkginfo": "^0.3.0",
+    "through2": "^2.0.0",
     "utils-copy": "^1.0.0",
     "validate.io-array": "^1.0.6",
     "validate.io-function": "^1.0.2",
